@@ -61,9 +61,8 @@ Senhas não devem ser guardadas em texto claro, mas sim com hash + salt, **salt*
 -   **Criptografar** um arquivo/mensagem para alguém.
 -   **Assinar** um arquivo (para garantir autenticidade).
 -   **Verificar assinatura** com a chave pública da outra pessoa.
-
-
-### 1) Gerar par de chaves (pública + privada)
+----------
+#### 1) Gerar par de chaves (pública + privada)
 
 1. Abra o **Kleopatra**.
 2. Menu **File → New Certificate**.
@@ -73,19 +72,19 @@ Senhas não devem ser guardadas em texto claro, mas sim com hash + salt, **salt*
 6. Clique **Create** e escolha uma **passphrase** forte quando solicitado.
 7. Ao finalizar, seja obrigado a **backup**: salve o **revocation certificate** (crie e guarde em local seguro) — use-o se precisar revogar a chave.
 
-### 2) Exportar chave pública (para alguém poder criptografar pra você)
+#### 2) Exportar chave pública (para alguém poder criptografar pra você)
 
 1. Na lista de certificados, selecione sua chave.
 2. Clique com o botão direito → **Export Certificates...** (ou botão **Export**).
 3. Escolha formato (ASCII-armored `.asc` é recomendado) e salve o arquivo. Envie esse `.asc` à pessoa.
 
-### 3) Importar chave pública (de outra pessoa)
+#### 3) Importar chave pública (de outra pessoa)
 
 1. Recebeu `outra_chave.asc`? Abra Kleopatra → **File → Import Certificates...** → selecione o arquivo `.asc`.
 2. A chave aparecerá na lista; revise o **fingerprint** e confirme que é a chave correta (compare por outro canal se for crítico).
 3. Opcional: defina **Trust**/ownertrust se você conhece e confia na pessoa (botão direito → **Set Ownertrust**).
 
-### 4) Criptografar um arquivo/mensagem para alguém
+#### 4) Criptografar um arquivo/mensagem para alguém
 
 > A criptografia usa a **chave pública do destinatário** — você não precisa da chave privada dele.
 
@@ -98,14 +97,14 @@ Senhas não devem ser guardadas em texto claro, mas sim com hash + salt, **salt*
 1. Abra Kleopatra → menu **Clipboard → Encrypt** (ou use o botão correspondente).
 2. Cole a mensagem, escolha destinatários e cifre. Copie o resultado cifrado para enviar.
 
-### 5) Assinar um arquivo (para garantir autenticidade)
+#### 5) Assinar um arquivo (para garantir autenticidade)
 Há duas formas: assinatura embutida (clear/sign) ou assinatura destacada (detached).
 
 1. Clique com o botão direito no arquivo → **Sign/Encrypt**.
 2. Marque **Sign** (pode escolher detached signature se quiser apenas `.sig`).
 3. Escolha sua chave para assinar e confirme. Resultado: arquivo assinado (ou `.sig` se detached).
 
-### 6) Verificar assinatura com a chave pública da outra pessoa
+#### 6) Verificar assinatura com a chave pública da outra pessoa
 1. Se você recebeu `arquivo` + `arquivo.sig` (ou um arquivo assinado), abra Kleopatra.
 2. Arraste o arquivo para a janela do Kleopatra **ou** clique com o botão direito no arquivo e escolha **Decrypt/Verify** / **Verify**.
 3. Kleopatra mostrará se a assinatura é válida e qual chave a assinou (verifique o fingerprint e se a chave importada corresponde à pessoa).

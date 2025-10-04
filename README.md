@@ -118,3 +118,17 @@ Há duas formas: assinatura embutida (clear/sign) ou assinatura destacada (detac
 * **Confirme fingerprints** por um canal alternativo (chamada, pessoalmente) antes de confiar em uma chave.
 * Use **RSA 4096** ou ECC (se preferir; ECC/Ed25519 é moderno) — RSA 4096 é compatível e seguro.
 * Para integração com e-mail, use S/MIME ou OpenPGP dependendo do cliente; Gpg4win oferece plugins para Outlook.
+
+
+## 03/10/2025
+
+- Tipos de criptografia assimetriaca 
+    - web of trust
+    - ca (certificate authority)
+
+
+pesquisar mais tarde:
+
+- PKI (public key infrastructure)  - conjunto de roles, policies, hardware, software e procedimentos necessários para criar, gerenciar, distribuir, usar, armazenar e revogar certificados digitais e gerenciar criptografia de chave pública.
+
+
